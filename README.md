@@ -45,6 +45,10 @@ They've asked us to estimate and start working on the development of the website
 
     [huskyMotors wireframes and sketch](https://www.figma.com/file/V0DF5XfrfdrDdF4pCwZyLl/dh_proyecto-integrador?node-id=0%3A1)
 
+- Project prototype
+
+    [wireframe prototype](https://www.figma.com/proto/V0DF5XfrfdrDdF4pCwZyLl/dh_proyecto-integrador?node-id=44%3A2&scaling=scale-down&page-id=0%3A1)
+
 - Design references
 
     - [Floyd](https://www.behance.net/gallery/135126051/FLOYD-CO-E-commerce-redesign?tracking_source=search_projects_recommended%7Cecommerce%20ux%20web%20design)
