@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// URL encoded
+app.use(express.urlencoded({ extended: true }));
+
 // methodOverride
 app.use(methodOverride('_method'));
 
