@@ -17,70 +17,7 @@
 
 <body>
   <header class="container-fluid">
-    <nav class="navbar">
-      <img class="logo" src="/images/logo.png" alt="">
-      <form class="search-bar" action="" method="get">
-        <ion-icon class="icon" name="search-outline"></ion-icon>
-        <input class="search" type="search" name="" id="" placeholder="Type your search..." placeholder />
-      </form>
-      <ul class="mobile-menu">
-        <li>
-          <a href="#">
-            <ion-icon name="information-circle-outline"></ion-icon>Our
-            brand
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="bookmarks-sharp"></ion-icon>Favorites
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="cart-outline"></ion-icon>Cart
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="log-out-outline"></ion-icon>Log out
-          </a>
-        </li>
-        <li>
-          <a href="/users/login">
-            <ion-icon name="log-in-outline"></ion-icon>Log in
-          </a>
-        </li>
-      </ul>
-      <ul class="menu">
-        <li>
-          <a href="#">
-            <ion-icon name="information-circle-outline"></ion-icon>Our
-            brand
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="bookmarks-sharp"></ion-icon>
-            </ion-icon>Favorites
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="cart-outline"></ion-icon>Cart
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="log-out-outline"></ion-icon>Log out
-          </a>
-        </li>
-        <li>
-          <a href="/users/login">
-            <ion-icon name="log-in-outline"></ion-icon>Log in
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <%- include('_navbar') %>
   </header>
   <main>
     <div class="hero">

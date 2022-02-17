@@ -8,7 +8,6 @@ let usersController = {
   signup: function (req, res) {
     res.render('signUp', { title: 'Sign Up' });
   },
-  show: function (req, res) { },
   edit: function (req, res) { },
   create: function (req, res) { },
   update: function (req, res) { },

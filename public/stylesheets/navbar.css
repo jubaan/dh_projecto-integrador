@@ -1,4 +1,4 @@
-nav {
+.navbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -9,6 +9,8 @@ nav {
   margin: 0 auto;
   padding: 20px 20px 10px 20px;
 }
+
+
 
 .logo {
   height: 40px;
