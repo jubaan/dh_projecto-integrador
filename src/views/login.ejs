@@ -86,26 +86,24 @@
     </nav>
   </header>
   <main>
-    <form class="login" method="POST" action="/">
-      <div class="input">
-        <ion-icon name="person-sharp"></ion-icon>
-        <input type="text" name="userName" id="userName" placeholder="John Doe" />
+    <form class="form" method="POST" action="/">
+      <div class="form-input-group">
+        <ion-icon class="form-icon" name="mail-sharp"></ion-icon>
+        <input class="form-input" type="email" name="email" id="email" placeholder="john.doe@email.com" />
       </div>
-      <div class="input">
-        <ion-icon name="mail-sharp"></ion-icon>
-        <input type="email" name="userName" id="userName" placeholder="John Doe" />
+      <div class="form-input-group">
+        <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
+        <input class="form-input" type="password" name="userPassword" id="userPassword" placeholder="********" />
+        <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
+        <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
       </div>
-      <div class="input">
-        <ion-icon name="keypad-sharp"></ion-icon>
-        <input type="password" name="userPassword" id="userPassword" placeholder="********" />
-        <ion-icon name="eye-sharp"></ion-icon>
-        <ion-icon name="eye-off-sharp"></ion-icon>
-      </div>
-      <div class="input">
-        <ion-icon name="keypad-sharp"></ion-icon>
-        <input type="password" name="userPasswordConfirm" id="userPasswordConfirm" placeholder="********" />
-        <ion-icon name="eye-sharp"></ion-icon>
-        <ion-icon name="eye-off-sharp"></ion-icon>
+      <button class="form-button" type="submit">
+        <span>Log In</span>
+      </button>
+      <div class="form-input-group">
+        <a href="/users/signup" class="form-link">
+          <span>sign up</span>
+        </a>
       </div>
     </form>
   </main>

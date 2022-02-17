@@ -6,8 +6,14 @@ let usersController = {
     res.redirect('logout');
   },
   signup: function (req, res) {
-    res.render('signUp', { title: 'Log in' });
+    res.render('signUp', { title: 'Sign Up' });
   },
+  show: function (req, res) { },
+  edit: function (req, res) { },
+  create: function (req, res) { },
+  update: function (req, res) { },
+  delete: function (req, res) { },
+  destroy: function (req, res) { },
 };
 
 module.exports = usersController;
