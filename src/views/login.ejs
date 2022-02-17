@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="container-fluid">
+    <nav class="navbar">
+      <ion-icon style="height: 25px; width:25px;" name="arrow-back-sharp"></ion-icon>
+      <h2>
+        <%= title %>
+      </h2>
+      <ion-icon style="height: 25px; width:25px;" name="ellipsis-horizontal"></ion-icon>
+      <ul class="mobile-menu">
+        <li>
+          <a href="#">
+            <ion-icon name="information-circle-outline"></ion-icon>Our
+            brand
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="bookmarks-sharp"></ion-icon>Favorites
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="cart-outline"></ion-icon>Cart
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="log-out-outline"></ion-icon>Log out
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="log-in-outline"></ion-icon>
+            </ion-icon>Log in
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li>
+          <a href="#">
+            <ion-icon name="information-circle-outline"></ion-icon>Our
+            brand
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="bookmarks-sharp"></ion-icon>
+            </ion-icon>Favorites
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="cart-outline"></ion-icon>Cart
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="log-out-outline"></ion-icon>Log out
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="log-in-outline"></ion-icon>
+            </ion-icon>Log in
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form class="form" method="POST" action="/">
+      <div class="form-input-group">
+        <ion-icon class="form-icon" name="mail-sharp"></ion-icon>
+        <input class="form-input" type="email" name="email" id="email" placeholder="john.doe@email.com" />
+      </div>
+      <div class="form-input-group">
+        <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
+        <input class="form-input" type="password" name="userPassword" id="userPassword" placeholder="********" />
+        <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
+        <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
+      </div>
+      <button class="form-button" type="submit">
+        <span>Log In</span>
+      </button>
+      <div class="form-input-group">
+        <a href="/users/signup" class="form-link">
+          <span>sign up</span>
+        </a>
+      </div>
+    </form>
+  </main>
+  <footer></footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
