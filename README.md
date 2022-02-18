@@ -1,6 +1,6 @@
-# dh_projecto-integrador
+# dh_proyecto-integrador
 
-- [dh_projecto-integrador](#dh_projecto-integrador)
+- [dh_proyecto-integrador](#dh_proyecto-integrador)
   - [huskyMotors](#huskymotors)
     - [Project estimate](#project-estimate)
     - [Deliverables](#deliverables)
