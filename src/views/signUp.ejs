@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css" />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+    />
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,700&display=swap"
-        rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <header class="container-fluid">
-        <%- include('_navbar') %>
-    </header>
+  <body>
+    <header class="container-fluid"><%- include('partials/_navbar') %></header>
     <main>
-        <form class="form" method="POST" action="/">
-            <div class="form-input-group">
-                <ion-icon class="form-icon" name="person-sharp"></ion-icon>
-                <input class="form-input" type="text" name="userName" id="userName" placeholder="John Doe" />
-            </div>
-            <div class="form-input-group">
-                <ion-icon class="form-icon" name="mail-sharp"></ion-icon>
-                <input class="form-input" type="email" name="email" id="email" placeholder="john.doe@email.com" />
-            </div>
-            <div class="form-input-group">
-                <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
-                <input class="form-input" type="password" name="userPassword" id="userPassword"
-                    placeholder="********" />
-                <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
-                <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
-            </div>
-            <div class="form-input-group">
-                <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
-                <input class="form-input" type="password" name="userPasswordConfirm" id="userPasswordConfirm"
-                    placeholder="********" />
-                <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
-                <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
-            </div>
-            <button class="form-button" type="submit">
-                <span>Sign Up</span>
-            </button>
-            <div class="form-input-group">
-                <a href="/users/login" class="form-link">
-                    <span>log in</span>
-                </a>
-            </div>
-        </form>
+      <form class="form" method="POST" action="/users/create" enctype="multipart/form-data">
+        <div class="form-input-group">
+          <ion-icon class="form-icon" name="person-sharp"></ion-icon>
+          <input
+            class="form-input"
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="form-input-group">
+          <ion-icon class="form-icon" name="mail-sharp"></ion-icon>
+          <input
+            class="form-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="john.doe@email.com"
+          />
+        </div>
+        <div class="form-input-group">
+          <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
+          <input
+            class="form-input"
+            type="password"
+            name="userPassword"
+            id="userPassword"
+            placeholder="********"
+          />
+          <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
+          <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
+        </div>
+        <div class="form-input-group">
+          <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
+          <input
+            class="form-input"
+            type="password"
+            name="userPasswordConfirm"
+            id="userPasswordConfirm"
+            placeholder="********"
+          />
+          <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
+          <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
+        </div>
+        <button class="form-button" type="submit">
+          <span>Sign Up</span>
+        </button>
+        <div class="form-input-group">
+          <a href="/users/login" class="form-link">
+            <span>log in</span>
+          </a>
+        </div>
+      </form>
     </main>
     <footer></footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

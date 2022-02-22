@@ -9,7 +9,9 @@ let usersController = {
     res.render('signUp', { title: 'Sign Up' });
   },
   edit: function (req, res) { },
-  create: function (req, res) { },
+  create: function (req, res) {
+    res.send(req.body)
+   },
   update: function (req, res) { },
   delete: function (req, res) { },
   destroy: function (req, res) { },

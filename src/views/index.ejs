@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    <%= title %>
-  </title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,700&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <header class="container-fluid">
-    <%- include('_navbar') %>
-  </header>
-  <main>
-    <div class="hero">
-    </div>
-    <h2>Go Ride. <br> Everything else can wait.</h2>
-    <div class="product-grid">
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-      </div>
-      <div class="product grow">
-        <img src="./images/svartpilen.png" alt="svartpilen" />
-        <ion-icon class="icon" name="bookmark-sharp">
+  <body>
+    <header class="container-fluid"><%- include('partials/_navbar') %></header>
+    <main>
+      <div class="hero"></div>
+      <h2>
+        Go Ride. <br />
+        Everything else can wait.
+      </h2>
+      <div class="product-grid">
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+        </div>
+        <div class="product grow">
+          <img src="./images/svartpilen.png" alt="svartpilen" />
+          <ion-icon class="icon" name="bookmark-sharp"></ion-icon>
           <ion-icon name="bookmark-outline"></ion-icon>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer></footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    </main>
+    <footer></footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
