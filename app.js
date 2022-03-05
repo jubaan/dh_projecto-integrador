@@ -10,6 +10,7 @@ var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');
 var productsRouter = require('./src/routes/products');
 var cartRouter = require('./src/routes/cart');
+const logMiddleware = require('./src/middlewares/logMiddleware');
 
 var app = express();
 
@@ -30,6 +31,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/cart', cartRouter);
+
+// user login middleware
+app.use(logMiddleware);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

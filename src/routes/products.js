@@ -16,9 +16,12 @@ const storage = multer.diskStorage({
     cb(null, "./public/images/products");
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now());
+    cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
   },
 });
+
+exports.upload = multer({ storage: storage });
+exports.require
 
 // const upload = multer({
 //   storage: multerS3({
@@ -35,7 +38,9 @@ const storage = multer.diskStorage({
 //   }),
 // });
 
-// router.get('/', productsController.list);
-router.post("/upload", upload.single("productFile"), productsController.upload);
+router.get("/", productsController.list);
+
+const uploadFile = multer({ storage });
+router.post("/upload", uploadFile.single("product"), productsController.upload);
 
 module.exports = router;

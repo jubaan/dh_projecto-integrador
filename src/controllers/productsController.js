@@ -1,4 +1,7 @@
 let productsController = {
+  list: (req, res, next) => {
+
+  },
   favorites: (req, res, next) => {
     res.render("favorites");
   },
@@ -11,6 +14,7 @@ let productsController = {
     }
     res.send(file);
   },
+  upload: (req, res, next) => {},
 };
 
 module.exports = productsController;

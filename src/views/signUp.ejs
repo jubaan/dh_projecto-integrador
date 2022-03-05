@@ -22,15 +22,20 @@
     <header class="container-fluid"><%- include('partials/_navbar') %></header>
     <main>
       <form class="form" method="POST" action="/users/create" enctype="multipart/form-data">
+        <%- include('partials/_localErrors') %>
         <div class="form-input-group">
           <ion-icon class="form-icon" name="person-sharp"></ion-icon>
           <input
             class="form-input"
             type="text"
-            name="userName"
-            id="userName"
+            name="username"
+            id="username"
             placeholder="John Doe"
+            value="<%= locals.old && old.username ? old.username : '' %>"
           />
+          <% if (locals.errors && errors.username) { %>
+            <p class="feedback"><%= errors.username %></p>
+          <% } %>
         </div>
         <div class="form-input-group">
           <ion-icon class="form-icon" name="mail-sharp"></ion-icon>
@@ -40,31 +45,43 @@
             name="email"
             id="email"
             placeholder="john.doe@email.com"
+            value="<%= locals.old && old.email ? old.email : '' %>"
           />
+           <% if (locals.errors && errors.email) { %>
+            <p class="feedback"><%= errors.email %></p>
+          <% } %>
         </div>
         <div class="form-input-group">
           <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
           <input
             class="form-input"
             type="password"
-            name="userPassword"
-            id="userPassword"
+            name="password"
+            id="password"
             placeholder="********"
+            value="<%= locals.old && old.password ? old.password : '' %>"
           />
           <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
           <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
+           <% if (locals.errors && errors.password) { %>
+            <p class="feedback"><%= errors.password %></p>
+          <% } %>
         </div>
         <div class="form-input-group">
           <ion-icon class="form-icon" name="keypad-sharp"></ion-icon>
           <input
             class="form-input"
             type="password"
-            name="userPasswordConfirm"
-            id="userPasswordConfirm"
+            name="passwordConfirmation"
+            id="passwordConfirmation"
             placeholder="********"
+            value="<%= locals.old && old.passwordConfirmation ? old.passwordConfirmation : '' %>"
           />
           <ion-icon class="form-icon-hidden" name="eye-sharp"></ion-icon>
           <ion-icon class="form-icon-right" name="eye-off-sharp"></ion-icon>
+           <% if (locals.errors && errors.passwordConfirmation) { %>
+            <p class="feedback"><%= errors.passwordConfirmation %></p>
+          <% } %>
         </div>
         <button class="form-button" type="submit">
           <span>Sign Up</span>
