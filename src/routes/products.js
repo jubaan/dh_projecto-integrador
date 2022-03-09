@@ -1,15 +1,8 @@
 var express = require("express");
 var router = express.Router();
 const multer = require("multer");
-// const multerS3 = require("multer-s3");
 const productsController = require("../controllers/productsController");
-// aws.config.update({
-//   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-//   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-//   region: "us-east-1",
-// });
-
-// const s3 = new aws.S3({});
+const { uploadFile, getFileStream } = require("../middlewares/s3.js");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -20,27 +13,19 @@ const storage = multer.diskStorage({
   },
 });
 
-exports.upload = multer({ storage: storage });
-exports.require
-
-// const upload = multer({
-//   storage: multerS3({
-//     s3: s3,
-//     bucket: "dh-proyecto-integrador",
-//     contentType: multerS3.AUTO_CONTENT_TYPE,
-//     acl: "public-read",
-//     metadata: function (req, file, cb) {
-//       cb(null, { fieldName: file.fieldname });
-//     },
-//     key: function (req, file, cb) {
-//       cb(null, Date.now().toString());
-//     },
-//   }),
-// });
-
 router.get("/", productsController.list);
 
-const uploadFile = multer({ storage });
-router.post("/upload", uploadFile.single("product"), productsController.upload);
+let upload = multer({ storage });
+router.post(
+  "/upload",
+  upload.single("productImage"),
+  async (req, res) => {
+    const file = req.file;
+    const restul = await uploadFile(file);
+    await unlinkFile(file.path);
+    res.send({ imagePath: `/upload/${result.key}` });
+  },
+  productsController.upload
+);
 
 module.exports = router;
