@@ -24,7 +24,7 @@ const uploadFile = (file) => {
   return s3.upload(uploadParams).promise();
 };
 
-exports.uploadFile = uploadFisle;
+exports.uploadFile = uploadFile;
 
 const getFileStream = (fileKey) => {
   const downloadStream = {
